@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Traffic Violation Detection - Kunal Gandvane</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <header id="header">
+            <div class="inner">
+				<ul class="actions" style="margin-bottom: 1.5em;">
+                    <li><a href="index.html" class="button small">← Back to Portfolio</a></li>
+                </ul>
+                <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Kunal Gandvane" alt="" style="width: 150px; height: 150px;" /></a>
+                <h1><strong>I am Kunal Gandvane,</strong><br />
+                an Undergraduate at IIT Bombay<br />
+                Specializing in Computer Vision and Deep Learning Architectures</h1>
+                <br>
+            </div>
+        </header>
+
+        <div id="main">
+            <section id="one">
+                <header class="major">
+                    <h2>Autonomous Traffic Rule Violation Detection System</h2>
+                    <p>Computer Vision & ML Research Internship<br />
+                    RBCCPS HiRo Lab | Indian Institute of Science (IISc) Bangalore</p>
+                </header>
+                
+                <div style="margin-bottom: 2em;">
+                    <video width="100%" controls autoplay muted loop style="border-radius: 0.35em; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                        <source src="images/demo4_result.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <h3>Project Overview</h3>
+                <p>During my research internship at IISc Bangalore, I was tasked with developing an intelligent computer vision system capable of monitoring traffic streams and autonomously identifying violations. The goal was to reduce the manual review time required by traffic authorities by engineering a pipeline that could perceive complex intersections, track multiple objects, and record evidence based on spatial rule-based logic.</p>
+                
+                <hr />
+
+                <h3>Technical Implementation</h3>
+                <p>To achieve high-accuracy detection and tracking in dynamic environments, the system was built using a combination of state-of-the-art deep learning architectures and tracking algorithms:</p>
+                <ul>
+                    <li><strong>Object Detection (YOLOv8):</strong> Trained two distinct YOLOv8 models leveraging the BDD100K and BSTLD datasets. This dual-model approach ensured robust, real-time detection of both vehicles and varying traffic light states under different lighting and weather conditions.</li>
+                    <li><strong>Multi-Object Tracking (DeepSORT):</strong> Integrated the DeepSORT algorithm to assign unique IDs to detected vehicles, maintaining consistent tracking across frames even during temporary occlusions in dense traffic.</li>
+                    <li><strong>Rule-Based Spatial Logic:</strong> Engineered custom logic to define intersection boundaries. The system evaluates the position of tracked vehicles against the state of the traffic light, flagging a violation when a vehicle crosses the threshold during a red light.</li>
+                </ul>
+
+                <hr />
+
+                <h3>System Output & Features</h3>
+                <p>Beyond detection, the system serves as a functional tool for automated enforcement. When a violation is triggered, the pipeline automatically clips the video, draws bounding box annotations highlighting the offending vehicle, and logs a timestamped record. This automated evidence generation significantly streamlines the traffic monitoring workflow.</p>
+
+                <ul class="actions">
+                    <li><a href="https://github.com/webserver105/Red_Light_Violation_Detection" target="_blank" class="button primary">View Source Code on GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://linkedin.com/in/kunal-gandvane-b28062346" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/webserver105" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="mailto:kunal7sr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

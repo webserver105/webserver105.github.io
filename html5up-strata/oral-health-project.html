@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Oral Health AI Classification - Kunal Gandvane</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <header id="header">
+            <div class="inner">
+                <ul class="actions" style="margin-bottom: 1.5em;">
+                    <li><a href="index.html" class="button small">← Back to Portfolio</a></li>
+                </ul>
+                <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Kunal Gandvane" style="width: 150px; height: 150px;" /></a>
+                <h1><strong>I am Kunal Gandvane,</strong><br />
+                an Undergraduate at IIT Bombay<br />
+                Specializing in Computer Vision and Deep Learning Architectures</h1>
+                <br>
+            </div>
+        </header>
+
+        <div id="main">
+            <section id="one">
+                <header class="major">
+                    <h2>AI-Driven Classification for Specialized Oral Informatics</h2>
+                    <p>Undergraduate Researcher<br />
+                    Guide: Prof. Nirmal Punjabi, KCHD | Indian Institute of Technology Bombay</p>
+                </header>
+                
+                <div style="margin-bottom: 2em;">
+                    <img src="images/fulls/annotated_R-01-02.jpg" alt="Oral Health Image Classification Pipeline" style="width: 40%; border-radius: 0.35em; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
+                </div>
+                
+                <h3>Project Overview</h3>
+                <p>During my tenure as an Undergraduate Researcher at IIT Bombay, I focused on addressing automated diagnostic challenges within medical imaging. The primary objective was to develop a robust, deep learning-based diagnostic tool capable of accurately segmenting and classifying specialized oral diseases from visual data, ultimately aiding in faster and more reliable medical informatics.</p>
+                
+                <hr />
+
+                <h3>Technical Implementation</h3>
+                <p>To handle the complexities and strict accuracy requirements of medical image classification, I architected an end-to-end deep learning pipeline focused on robust feature extraction and balanced data handling:</p>
+                <ul>
+                    <li><strong>Deep Learning Architecture (ResNet101):</strong> Leveraged transfer learning by building upon a deep ResNet101 architecture. This allowed the model to utilize pre-trained weights to extract highly complex, hierarchical visual features from the medical images without needing to train a massive network entirely from scratch.</li>
+                    <li><strong>Data Pipeline & Stratification:</strong> Medical datasets often suffer from severe class imbalances. To solve this, I developed a complete training and evaluation pipeline using TensorFlow and Keras. I integrated data loading with Pandas and utilized Scikit-learn to enforce stratified data splitting, ensuring that rare disease classes maintained a proportional and balanced representation during model training.</li>
+                    <li><strong>Integrated Data Augmentation:</strong> To prevent the model from overfitting to the limited medical dataset and to enhance its ability to generalize to unseen patient data, I engineered custom data augmentation strategies and integrated them directly into the model's architecture using Keras preprocessing layers.</li>
+                </ul>
+
+                <hr />
+
+                <h3>System Output & Impact</h3>
+                <p>The resulting pipeline provided a highly scalable and stable solution for oral disease classification. By combining the deep feature extraction of ResNet101 with rigorously balanced data handling and augmentation, the model achieved reliable multi-class classification, demonstrating the viability of advanced deep learning architectures in specialized medical diagnostic environments.</p>
+
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://linkedin.com/in/kunal-gandvane-b28062346" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/webserver105" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="mailto:kunal7sr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Predictive Modeling for Gyroid Lattices - Kunal Gandvane</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <header id="header">
+            <div class="inner">
+                <ul class="actions" style="margin-bottom: 1.5em;">
+                    <li><a href="index.html" class="button small">← Back to Portfolio</a></li>
+                </ul>
+                <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Kunal Gandvane" style="width: 150px; height: 150px;" /></a>
+                <h1><strong>I am Kunal Gandvane,</strong><br />
+                an Undergraduate at IIT Bombay<br />
+                Specializing in Computer Vision and Deep Learning Architectures</h1>
+                <br>
+            </div>
+        </header>
+
+        <div id="main">
+            <section id="one">
+                <header class="major">
+                    <h2>Predictive Modeling for Additively Manufactured Gyroid Lattices</h2>
+                    <p>Data Science & Research Internship<br />
+                    Guide: Dr. Praveen Bidare, Sheffield Hallam University</p>
+                </header>
+                
+                <span class="image main" style="margin-bottom: 2em;">
+                    <img src="images/gyroid_ml_workflow.png" alt="Machine Learning Workflow for Gyroid Lattices" style="border-radius: 0.35em; box-shadow: 0 0 10px rgba(0,0,0,0.1  );" />
+                </span>
+                
+                <h3>Project Overview</h3>
+                <p>The optimization of 3D printed lattice structures involves highly nonlinear interactions between various geometric and post-processing parameters. Traditional trial-and-error experimental approaches are impractical for such high-dimensional design spaces. In this research, I developed a robust, data-driven machine learning framework to predict performance metrics and bypass computational bottlenecks, establishing a direct mapping between complex geometric parameters and target outcomes.</p>
+                
+                <hr />
+
+                <h3>Technical Implementation</h3>
+                <p>To capture the complex multiphysics interactions effectively, the modeling framework utilized an ensemble of Deep Learning and Machine Learning strategies tailored to specific variance profiles:</p>
+                
+                <ul>
+                    <li><strong>Deep Artificial Neural Networks (ANN):</strong> Engineered a feed-forward ANN using TensorFlow to map high-variance properties. For energy absorption predictions, I designed a deeper 3-layer architecture (256, 128, 64 neurons) utilizing the 'Swish' activation function and Batch Normalization to stabilize the learning process and capture peak values in the energy landscape. L2 regularization and Dropout layers (rate=0.3) were implemented to prevent overfitting.</li>
+                    <li><strong>Physics-Informed Feature Engineering:</strong> Rather than treating inputs purely statistically, I derived new predictive terms directly from constituent mechanics (e.g., Stress-Strain Ratio and Inverse Solidity). This embedded physical constraints into the Gradient Boosting Regressor, giving it a "mechanical head start" to capture non-linear behaviors.</li>
+                    <li><strong>Data Augmentation & Robust Validation:</strong> Addressed experimental sample size limits by injecting Gaussian noise (&sigma;=0.03) into the training manifold, doubling the dataset for Gradient Boosting and acting as a continuous regularizer. Additionally, a Leave-One-Out Cross-Validation (LOOCV) protocol was utilized for Support Vector Regression (SVR) to maximize data utility and model generalizability.</li>
+                </ul>
+
+                <div class="row" style="margin: 2em 0;">
+                    <div class="col-6 col-12-small">
+                        <img src="images/winter.png" alt="ANN Architecture Schematic" style="width: 100%; border-radius: 0.35em;" />
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <img src="images/wint.png" alt="Pearson Correlation Matrix" style="width: 100%; border-radius: 0.35em;" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3>System Output & Features</h3>
+                <p>The deployed machine learning models demonstrated exceptional predictive fidelity across all targeted metrics. The optimized ANN model utilizing Swish activation achieved a coefficient of determination (R&sup2;) of 0.9616 for energy absorption and 0.9374 for compressive stress. Furthermore, the physics-informed Gradient Boosting and SVR models reliably predicted stiffness properties (R&sup2; = 0.8509 and 0.8257, respectively). This framework successfully proves that data-driven optimization can reliably replace extensive physical testing in additive manufacturing.</p>
+
+                <ul class="actions">
+                    <li><a href="#" class="button primary">Read the Full Publication</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://linkedin.com/in/kunal-gandvane-b28062346" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/webserver105" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="mailto:kunal7sr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
